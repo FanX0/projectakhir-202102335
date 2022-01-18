@@ -1,0 +1,35 @@
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+
+                </div>
+                <div class="card-body">
+                    <a routerLink="" class="btn btn-primary mb-3">Tambah Data</a>
+                    <table class="table table-head-fixed text-nowrap">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let currentDivision of divisions; let i = index">
+                            <tr>
+                                <td>{{currentDivision._id}}</td>
+                                <td>{{currentDivision.name}}</td>
+                                <td>{{currentDivision.description}}</td>
+                                <td>
+                                    <a routerLink="" class="btn btn-warning"><i class="far fa-edit nav-icon">edit</i></a>
+                                    <a routerLink="" class="btn btn-danger"><i class="far fa-hapus nav-icon">delete</i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
